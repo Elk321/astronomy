@@ -1,6 +1,7 @@
 import requests
 import streamlit as st
 
+st.set_page_config(page_title="Astronomy Image")
 
 # Url
 url = f"https://api.nasa.gov/planetary/apod?api_key={st.secrets.api_key}"
@@ -20,6 +21,6 @@ with open("images/image.jpg", "wb") as file:
     file.write(image_content)
 
 # Display all the elements
-st.header(title)
+st.title(title)
 st.image("images/image.jpg")
 st.write(explanation)
