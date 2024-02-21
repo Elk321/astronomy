@@ -1,7 +1,7 @@
 import requests
 import streamlit as st
 
-st.set_page_config(page_title="Astronomy Image")
+st.set_page_config(page_title="Astronomy Image", page_icon="telescope.png")
 
 # Url
 url = f"https://api.nasa.gov/planetary/apod?api_key={st.secrets.api_key}"
