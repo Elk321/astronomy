@@ -4,6 +4,15 @@ from pytube import YouTube
 
 st.set_page_config(page_title="Astronomy Image", page_icon="telescope.png")
 
+hide_st_style = """
+                <style>
+                #MainMenu {visibility: hidden;}
+                footer {visibility: hidden;}
+                header {visibility: hidden;}
+                </style>
+                """
+st.markdown(hide_st_style, unsafe_allow_html=True)
+
 # Url
 url = f"https://api.nasa.gov/planetary/apod?api_key={st.secrets.api_key}"
 
